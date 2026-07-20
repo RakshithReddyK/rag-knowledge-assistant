@@ -1,9 +1,8 @@
 from typing import List
 
-from .vectorstore import VectorStore
-from .llm import LLMClient
 from .config import TOP_K
-
+from .llm import LLMClient
+from .vectorstore import VectorStore
 
 SYSTEM_PROMPT = (
     "You are a helpful assistant that answers questions based ONLY on the provided context. "

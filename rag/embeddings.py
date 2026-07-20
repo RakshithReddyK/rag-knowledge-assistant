@@ -1,5 +1,7 @@
 from sentence_transformers import SentenceTransformer
+
 from .config import EMBEDDING_MODEL_NAME
+
 
 class EmbeddingModel:
     def __init__(self, model_name: str = EMBEDDING_MODEL_NAME):
