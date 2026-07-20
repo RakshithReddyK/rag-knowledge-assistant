@@ -1,0 +1,47 @@
+services:
+  # One-off ingestion job: chunks data/*.md and .txt and writes them into
+  # the shared chroma_db volume. Run this once (and again whenever data/
+  # changes) before -- or alongside -- starting api/frontend:
+  #   docker compose run --rm ingest
+  ingest:
+    build: .
+    command: ["python", "-m", "rag.ingest"]
+    env_file:
+      - .env
+    volumes:
+      - chroma_data:/app/chroma_db
+      - ./data:/app/data:ro
+    profiles: ["tools"]
+
+  api:
+    build: .
+    command: ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "9000"]
+    ports:
+      - "9000:9000"
+    env_file:
+      - .env
+    volumes:
+      - chroma_data:/app/chroma_db
+      - ./data:/app/data:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:9000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build: .
+    command: ["streamlit", "run", "streamlit_app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+    ports:
+      - "8501:8501"
+    environment:
+      # Talk to the `api` service by its Docker Compose hostname, not
+      # localhost -- these are separate containers.
+      - RAG_API_URL=http://api:9000/ask
+    depends_on:
+      - api
+
+volumes:
+  # Persists the Chroma vector store (embeddings + HNSW index) across
+  # container restarts and rebuilds.
+  chroma_data:

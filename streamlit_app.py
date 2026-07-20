@@ -1,4 +1,5 @@
 import os
+
 import requests
 import streamlit as st
 
@@ -54,14 +55,14 @@ with st.sidebar:
         - Streamlit frontend
 
         **Tip:** Ask things like:
-        - "Summarize my projects."
-        - "What NLP work have I done?"
-        - "What experience do I have with AWS and data engineering?"
+        - "How does a token bucket rate limiter work?"
+        - "What's the difference between a Bloom filter and a hash set?"
+        - "Why does column order matter in a composite database index?"
         """
     )
     if st.button("🧹 Clear chat"):
         st.session_state["messages"] = []
-        st.experimental_rerun()
+        st.rerun()
 
 # Display chat history
 for msg in st.session_state["messages"]:

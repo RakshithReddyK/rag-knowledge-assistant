@@ -1,6 +1,7 @@
 import os
 import uuid
-from typing import List, Dict, Any
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Union
 
 import chromadb
 from chromadb.config import Settings
@@ -8,12 +9,29 @@ from chromadb.config import Settings
 from .config import CHROMA_DIR
 from .embeddings import EmbeddingModel
 
+
 class VectorStore:
-    def __init__(self, collection_name: str = "documents"):
-        self.embedder = EmbeddingModel()
-        os.makedirs(CHROMA_DIR, exist_ok=True)
+    def __init__(
+        self,
+        collection_name: str = "documents",
+        persist_directory: Optional[Union[str, Path]] = None,
+        embedder: Optional[Any] = None,
+    ):
+        """
+        Args:
+            collection_name: Chroma collection to read/write.
+            persist_directory: Where Chroma persists its files. Defaults to
+                the app's configured ``CHROMA_DIR``; override in tests to
+                point at a temporary directory instead of the real store.
+            embedder: Object exposing ``.encode(texts)``. Defaults to the
+                real ``EmbeddingModel``; override in tests to avoid loading
+                the sentence-transformers model.
+        """
+        self.embedder = embedder if embedder is not None else EmbeddingModel()
+        self.persist_directory = Path(persist_directory) if persist_directory else CHROMA_DIR
+        os.makedirs(self.persist_directory, exist_ok=True)
         self.client = chromadb.PersistentClient(
-            path=str(CHROMA_DIR),
+            path=str(self.persist_directory),
             settings=Settings(allow_reset=True)
         )
         self.collection = self.client.get_or_create_collection(name=collection_name)

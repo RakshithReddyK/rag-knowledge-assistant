@@ -2,6 +2,7 @@ import os
 from typing import List
 
 from groq import Groq
+
 from .config import GROQ_API_KEY_ENV, GROQ_MODEL_NAME
 
 
@@ -14,7 +15,12 @@ class LLMClient:
             )
         self.client = Groq(api_key=api_key)
 
-    def generate(self, system_prompt: str, messages: List[dict], model: str = GROQ_MODEL_NAME) -> str:
+    def generate(
+        self,
+        system_prompt: str,
+        messages: List[dict],
+        model: str = GROQ_MODEL_NAME,
+    ) -> str:
         completion = self.client.chat.completions.create(
             model=model,
             messages=[

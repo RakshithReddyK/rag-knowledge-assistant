@@ -11,12 +11,26 @@ __pycache__/
 # Streamlit cache
 .streamlit/
 
-# Chroma persisted db
-chroma_index/
-vectorstore/
-db/
+# Chroma persisted db (real path used by rag/config.py)
+chroma_db/
+
+# Personal / PII documents that must never be committed
+data/Resume.rtf
 
 # Secret keys
 .env
 *.env
+
+# Test / build artifacts
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
 
