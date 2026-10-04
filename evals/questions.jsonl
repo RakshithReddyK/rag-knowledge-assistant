@@ -1,0 +1,28 @@
+{"id": "dev-00", "split": "dev", "question": "How does token bucket rate limiting allow bursts?", "source": "rate_limiting.md", "evidence": "refills"}
+{"id": "dev-01", "split": "dev", "question": "Why can fixed windows double the effective request rate?", "source": "rate_limiting.md", "evidence": "boundary"}
+{"id": "dev-02", "split": "dev", "question": "Can a Bloom filter incorrectly say an item exists?", "source": "bloom_filters.md", "evidence": "false positive"}
+{"id": "dev-03", "split": "dev", "question": "What happens when a node joins a consistent hashing ring?", "source": "consistent_hashing.md", "evidence": "ring"}
+{"id": "dev-04", "split": "dev", "question": "Which database index supports range scans?", "source": "database_indexing.md", "evidence": "B-tree"}
+{"id": "dev-05", "split": "dev", "question": "How do ETags validate cached HTTP responses?", "source": "http_caching.md", "evidence": "ETag"}
+{"id": "dev-06", "split": "dev", "question": "When should I restart after editing an indexed document?", "source": "retrieval_operations.md", "evidence": "restart"}
+{"id": "dev-07", "split": "dev", "question": "Is Chroma index replacement atomic for concurrent readers?", "source": "retrieval_operations.md", "evidence": "not atomic"}
+{"id": "dev-08", "split": "dev", "question": "Which two tools may the evidence agent use?", "source": "agent_safety.md", "evidence": "read_document"}
+{"id": "dev-09", "split": "dev", "question": "How does the agent stop when a tool fails?", "source": "agent_safety.md", "evidence": "tool_error"}
+{"id": "dev-10", "split": "dev", "question": "What header authenticates the local knowledge API?", "source": "api_operations.md", "evidence": "X-API-Key"}
+{"id": "dev-11", "split": "dev", "question": "How long is the generation provider timeout?", "source": "api_operations.md", "evidence": "fifteen-second"}
+{"id": "test-12", "split": "test", "question": "Compare leaky bucket and token bucket burst behavior.", "source": "rate_limiting.md", "evidence": "fixed output"}
+{"id": "test-13", "split": "test", "question": "Why does sliding window log consume memory?", "source": "rate_limiting.md", "evidence": "timestamp"}
+{"id": "test-14", "split": "test", "question": "Why does a Bloom filter have no false negatives?", "source": "bloom_filters.md", "evidence": "false negative"}
+{"id": "test-15", "split": "test", "question": "What are virtual nodes in consistent hashing?", "source": "consistent_hashing.md", "evidence": "virtual"}
+{"id": "test-16", "split": "test", "question": "What is the cost of adding too many database indexes?", "source": "database_indexing.md", "evidence": "write"}
+{"id": "test-17", "split": "test", "question": "How does Cache-Control max-age affect HTTP caching?", "source": "http_caching.md", "evidence": "max-age"}
+{"id": "test-18", "split": "test", "question": "How do we prevent duplicate chunks during re-indexing?", "source": "retrieval_operations.md", "evidence": "duplicate"}
+{"id": "test-19", "split": "test", "question": "Which retrieval metrics help compare chunk configurations?", "source": "retrieval_operations.md", "evidence": "reciprocal"}
+{"id": "test-20", "split": "test", "question": "Can read_document access an arbitrary filesystem path?", "source": "agent_safety.md", "evidence": "in-memory map"}
+{"id": "test-21", "split": "test", "question": "Does the agent deadline forcibly interrupt Python tools?", "source": "agent_safety.md", "evidence": "does not forcibly"}
+{"id": "test-22", "split": "test", "question": "What does the API return after the request budget is exhausted?", "source": "api_operations.md", "evidence": "429"}
+{"id": "test-23", "split": "test", "question": "What is the cost of local retrieval versus generated answers?", "source": "api_operations.md", "evidence": "CPU"}
+{"id": "ood-24", "split": "ood", "question": "Who won the Wimbledon tennis championship?", "source": null, "evidence": null}
+{"id": "ood-25", "split": "ood", "question": "Which sushi restaurant should I book tonight?", "source": null, "evidence": null}
+{"id": "ood-26", "split": "ood", "question": "How do I renew my passport?", "source": null, "evidence": null}
+{"id": "ood-27", "split": "ood", "question": "What is the capital of Peru?", "source": null, "evidence": null}

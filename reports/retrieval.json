@@ -1,0 +1,746 @@
+{
+  "scope": "28 hand-authored cases; small regression set, not a general benchmark",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "provider_calls": 0,
+  "provider_cost_usd": 0,
+  "development": {
+    "100/20": {
+      "n": 12,
+      "hit_rate_at_1": 1.0,
+      "hit_rate_at_3": 1.0,
+      "mrr_at_3": 1.0,
+      "evidence_hit_at_3": 1.0,
+      "latency_p50_ms": 0.02950949999558361,
+      "latency_p95_ms": 0.04853199993704038,
+      "queries": [
+        {
+          "id": "dev-00",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "rate_limiting.md",
+            "rate_limiting.md",
+            "rate_limiting.md"
+          ],
+          "latency_ms": 0.05845600003340223
+        },
+        {
+          "id": "dev-01",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "rate_limiting.md",
+            "rate_limiting.md",
+            "rate_limiting.md"
+          ],
+          "latency_ms": 0.03914800004167773
+        },
+        {
+          "id": "dev-02",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "bloom_filters.md",
+            "bloom_filters.md",
+            "bloom_filters.md"
+          ],
+          "latency_ms": 0.03068599994549004
+        },
+        {
+          "id": "dev-03",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "consistent_hashing.md",
+            "consistent_hashing.md",
+            "consistent_hashing.md"
+          ],
+          "latency_ms": 0.030895999998392654
+        },
+        {
+          "id": "dev-04",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "database_indexing.md",
+            "database_indexing.md",
+            "database_indexing.md"
+          ],
+          "latency_ms": 0.027500999976837193
+        },
+        {
+          "id": "dev-05",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "http_caching.md",
+            "http_caching.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.02680899990537
+        },
+        {
+          "id": "dev-06",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "retrieval_operations.md",
+            "agent_safety.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.028172000043014123
+        },
+        {
+          "id": "dev-07",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "retrieval_operations.md",
+            "retrieval_operations.md",
+            "database_indexing.md"
+          ],
+          "latency_ms": 0.030585999979848566
+        },
+        {
+          "id": "dev-08",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "agent_safety.md",
+            "agent_safety.md",
+            "http_caching.md"
+          ],
+          "latency_ms": 0.04853199993704038
+        },
+        {
+          "id": "dev-09",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "agent_safety.md",
+            "agent_safety.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.02095100001042738
+        },
+        {
+          "id": "dev-10",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "api_operations.md",
+            "api_operations.md",
+            "agent_safety.md"
+          ],
+          "latency_ms": 0.028433000011318654
+        },
+        {
+          "id": "dev-11",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "api_operations.md",
+            "api_operations.md",
+            "agent_safety.md"
+          ],
+          "latency_ms": 0.02171200003431295
+        }
+      ]
+    },
+    "160/32": {
+      "n": 12,
+      "hit_rate_at_1": 1.0,
+      "hit_rate_at_3": 1.0,
+      "mrr_at_3": 1.0,
+      "evidence_hit_at_3": 1.0,
+      "latency_p50_ms": 0.022313500039672363,
+      "latency_p95_ms": 0.03352900000663794,
+      "queries": [
+        {
+          "id": "dev-00",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "rate_limiting.md",
+            "rate_limiting.md",
+            "rate_limiting.md"
+          ],
+          "latency_ms": 0.03352900000663794
+        },
+        {
+          "id": "dev-01",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "rate_limiting.md",
+            "rate_limiting.md",
+            "rate_limiting.md"
+          ],
+          "latency_ms": 0.028442000029826886
+        },
+        {
+          "id": "dev-02",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "bloom_filters.md",
+            "bloom_filters.md",
+            "bloom_filters.md"
+          ],
+          "latency_ms": 0.023714999997537234
+        },
+        {
+          "id": "dev-03",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "consistent_hashing.md",
+            "consistent_hashing.md",
+            "consistent_hashing.md"
+          ],
+          "latency_ms": 0.022353000076691387
+        },
+        {
+          "id": "dev-04",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "database_indexing.md",
+            "database_indexing.md",
+            "database_indexing.md"
+          ],
+          "latency_ms": 0.02072100005534594
+        },
+        {
+          "id": "dev-05",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "http_caching.md",
+            "api_operations.md",
+            "http_caching.md"
+          ],
+          "latency_ms": 0.040480000052411924
+        },
+        {
+          "id": "dev-06",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "retrieval_operations.md",
+            "agent_safety.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.02196299999468465
+        },
+        {
+          "id": "dev-07",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "retrieval_operations.md",
+            "database_indexing.md",
+            "database_indexing.md"
+          ],
+          "latency_ms": 0.022274000002653338
+        },
+        {
+          "id": "dev-08",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "agent_safety.md",
+            "api_operations.md",
+            "http_caching.md"
+          ],
+          "latency_ms": 0.023625000039828592
+        },
+        {
+          "id": "dev-09",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "agent_safety.md",
+            "api_operations.md",
+            "agent_safety.md"
+          ],
+          "latency_ms": 0.015201999985947623
+        },
+        {
+          "id": "dev-10",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "api_operations.md",
+            "agent_safety.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.02122199998666474
+        },
+        {
+          "id": "dev-11",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "api_operations.md",
+            "api_operations.md",
+            "agent_safety.md"
+          ],
+          "latency_ms": 0.01634399995964486
+        }
+      ]
+    },
+    "200/40": {
+      "n": 12,
+      "hit_rate_at_1": 1.0,
+      "hit_rate_at_3": 1.0,
+      "mrr_at_3": 1.0,
+      "evidence_hit_at_3": 1.0,
+      "latency_p50_ms": 0.019668499987801624,
+      "latency_p95_ms": 0.03087599998252699,
+      "queries": [
+        {
+          "id": "dev-00",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "rate_limiting.md",
+            "rate_limiting.md",
+            "rate_limiting.md"
+          ],
+          "latency_ms": 0.03087599998252699
+        },
+        {
+          "id": "dev-01",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "rate_limiting.md",
+            "rate_limiting.md",
+            "bloom_filters.md"
+          ],
+          "latency_ms": 0.025648000018918538
+        },
+        {
+          "id": "dev-02",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "bloom_filters.md",
+            "bloom_filters.md",
+            "bloom_filters.md"
+          ],
+          "latency_ms": 0.020360000007713097
+        },
+        {
+          "id": "dev-03",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "consistent_hashing.md",
+            "consistent_hashing.md",
+            "consistent_hashing.md"
+          ],
+          "latency_ms": 0.01996899993628176
+        },
+        {
+          "id": "dev-04",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "database_indexing.md",
+            "database_indexing.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.037014999975326646
+        },
+        {
+          "id": "dev-05",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "http_caching.md",
+            "http_caching.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.017606000028536073
+        },
+        {
+          "id": "dev-06",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "retrieval_operations.md",
+            "agent_safety.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.018447999991622055
+        },
+        {
+          "id": "dev-07",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "retrieval_operations.md",
+            "database_indexing.md",
+            "database_indexing.md"
+          ],
+          "latency_ms": 0.019368000039321487
+        },
+        {
+          "id": "dev-08",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "agent_safety.md",
+            "bloom_filters.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.02014000006056449
+        },
+        {
+          "id": "dev-09",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "agent_safety.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.013098999943395029
+        },
+        {
+          "id": "dev-10",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "api_operations.md",
+            "agent_safety.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.018376999946667638
+        },
+        {
+          "id": "dev-11",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "api_operations.md",
+            "api_operations.md",
+            "http_caching.md"
+          ],
+          "latency_ms": 0.014461000091614551
+        }
+      ]
+    }
+  },
+  "selected_chunk_words": 200,
+  "selected_overlap_words": 40,
+  "index_version": "755bb1d9fb15cfb5",
+  "documents": 8,
+  "chunks": 19,
+  "test": {
+    "overlap": {
+      "n": 12,
+      "hit_rate_at_1": 0.9166666666666666,
+      "hit_rate_at_3": 1.0,
+      "mrr_at_3": 0.9583333333333334,
+      "evidence_hit_at_3": 0.9166666666666666,
+      "latency_p50_ms": 0.013104999993629463,
+      "latency_p95_ms": 0.014561999932993785,
+      "queries": [
+        {
+          "id": "test-12",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "rate_limiting.md",
+            "rate_limiting.md",
+            "rate_limiting.md"
+          ],
+          "latency_ms": 0.053599000011672615
+        },
+        {
+          "id": "test-13",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "rate_limiting.md",
+            "rate_limiting.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.01429100007044326
+        },
+        {
+          "id": "test-14",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "bloom_filters.md",
+            "bloom_filters.md",
+            "bloom_filters.md"
+          ],
+          "latency_ms": 0.014561999932993785
+        },
+        {
+          "id": "test-15",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "consistent_hashing.md",
+            "consistent_hashing.md",
+            "consistent_hashing.md"
+          ],
+          "latency_ms": 0.010145000032935059
+        },
+        {
+          "id": "test-16",
+          "rank": 2,
+          "evidence_hit": false,
+          "retrieved_sources": [
+            "bloom_filters.md",
+            "database_indexing.md",
+            "rate_limiting.md"
+          ],
+          "latency_ms": 0.01412100004927197
+        },
+        {
+          "id": "test-17",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "http_caching.md",
+            "http_caching.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.013770000009571959
+        },
+        {
+          "id": "test-18",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "retrieval_operations.md",
+            "bloom_filters.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.012669000057030644
+        },
+        {
+          "id": "test-19",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "retrieval_operations.md",
+            "retrieval_operations.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.011617000041042047
+        },
+        {
+          "id": "test-20",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "agent_safety.md",
+            "bloom_filters.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.011115999996036408
+        },
+        {
+          "id": "test-21",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "agent_safety.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.010625999948388198
+        },
+        {
+          "id": "test-22",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "api_operations.md",
+            "retrieval_operations.md",
+            "agent_safety.md"
+          ],
+          "latency_ms": 0.013089999924886797
+        },
+        {
+          "id": "test-23",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "api_operations.md",
+            "api_operations.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.013120000062372128
+        }
+      ]
+    },
+    "bm25": {
+      "n": 12,
+      "hit_rate_at_1": 0.9166666666666666,
+      "hit_rate_at_3": 1.0,
+      "mrr_at_3": 0.9583333333333334,
+      "evidence_hit_at_3": 0.9166666666666666,
+      "latency_p50_ms": 0.021637000031660136,
+      "latency_p95_ms": 0.023916000031931617,
+      "queries": [
+        {
+          "id": "test-12",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "rate_limiting.md",
+            "rate_limiting.md",
+            "rate_limiting.md"
+          ],
+          "latency_ms": 0.0238449999869772
+        },
+        {
+          "id": "test-13",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "rate_limiting.md",
+            "rate_limiting.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.020470999970712
+        },
+        {
+          "id": "test-14",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "bloom_filters.md",
+            "bloom_filters.md",
+            "bloom_filters.md"
+          ],
+          "latency_ms": 0.04920300000321731
+        },
+        {
+          "id": "test-15",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "consistent_hashing.md",
+            "consistent_hashing.md",
+            "consistent_hashing.md"
+          ],
+          "latency_ms": 0.014911999983269197
+        },
+        {
+          "id": "test-16",
+          "rank": 2,
+          "evidence_hit": false,
+          "retrieved_sources": [
+            "bloom_filters.md",
+            "database_indexing.md",
+            "consistent_hashing.md"
+          ],
+          "latency_ms": 0.023916000031931617
+        },
+        {
+          "id": "test-17",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "http_caching.md",
+            "http_caching.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.02360500002396293
+        },
+        {
+          "id": "test-18",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "retrieval_operations.md",
+            "bloom_filters.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.021742000058111444
+        },
+        {
+          "id": "test-19",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "retrieval_operations.md",
+            "retrieval_operations.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.019008999970537843
+        },
+        {
+          "id": "test-20",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "agent_safety.md",
+            "retrieval_operations.md",
+            "bloom_filters.md"
+          ],
+          "latency_ms": 0.01840700008415297
+        },
+        {
+          "id": "test-21",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "agent_safety.md",
+            "api_operations.md"
+          ],
+          "latency_ms": 0.017286000002059154
+        },
+        {
+          "id": "test-22",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "api_operations.md",
+            "agent_safety.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.02220299995769892
+        },
+        {
+          "id": "test-23",
+          "rank": 1,
+          "evidence_hit": true,
+          "retrieved_sources": [
+            "api_operations.md",
+            "api_operations.md",
+            "retrieval_operations.md"
+          ],
+          "latency_ms": 0.02153200000520883
+        }
+      ]
+    }
+  },
+  "out_of_domain": [
+    {
+      "question": "Who won the Wimbledon tennis championship?",
+      "returned_evidence": false
+    },
+    {
+      "question": "Which sushi restaurant should I book tonight?",
+      "returned_evidence": false
+    },
+    {
+      "question": "How do I renew my passport?",
+      "returned_evidence": false
+    },
+    {
+      "question": "What is the capital of Peru?",
+      "returned_evidence": false
+    }
+  ]
+}
