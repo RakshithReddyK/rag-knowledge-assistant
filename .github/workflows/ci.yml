@@ -1,27 +1,31 @@
 name: CI
-
 on:
   push:
     branches: [main]
   pull_request:
-
+permissions:
+  contents: read
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.11", "3.12"]
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-          cache: "pip"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt -r requirements-dev.txt
-
-      - name: Lint (ruff)
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - name: Install test and vector-store dependencies
+        run: pip install -r requirements-test.txt chromadb==1.5.9
+      - name: Lint
         run: ruff check .
-
-      - name: Test (pytest)
-        run: pytest -v
+      - name: Test API, tools, chunking, and index replacement
+        run: pytest -q
+      - name: Reproduce retrieval evaluation
+        run: python -m rag.evaluate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: retrieval-report-${{ matrix.python }}
+          path: reports/retrieval.json

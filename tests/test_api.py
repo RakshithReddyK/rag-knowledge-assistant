@@ -5,6 +5,8 @@ store. `api.main.get_rag_pipeline` is overridden via FastAPI's
 `dependency_overrides` with a fake pipeline, so importing api.main and
 calling /ask never requires GROQ_API_KEY or network access.
 """
+
+import pytest
 from fastapi.testclient import TestClient
 
 from api.main import app, get_rag_pipeline
@@ -13,7 +15,7 @@ from api.main import app, get_rag_pipeline
 class FakeRAGPipeline:
     """Stands in for rag.rag_chain.RAGPipeline -- no vector store, no LLM."""
 
-    def answer(self, question: str) -> dict:
+    def answer(self, question: str, mode="extractive", top_k=3) -> dict:
         return {
             "answer": f"Fake answer for: {question}",
             "context": [
@@ -29,7 +31,12 @@ def _override_pipeline():
     return FakeRAGPipeline()
 
 
-app.dependency_overrides[get_rag_pipeline] = _override_pipeline
+@pytest.fixture(autouse=True)
+def override_pipeline():
+    app.dependency_overrides[get_rag_pipeline] = _override_pipeline
+    yield
+    app.dependency_overrides.clear()
+
 
 client = TestClient(app)
 
