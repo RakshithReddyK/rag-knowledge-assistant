@@ -5,7 +5,12 @@ model) so the test is fast, offline, and doesn't depend on downloading model
 weights. It also points Chroma at a pytest tmp_path instead of the app's
 real chroma_db/ directory, so tests never touch (or pollute) real data.
 """
+
 import hashlib
+
+import pytest
+
+pytest.importorskip("chromadb")
 
 from rag.vectorstore import VectorStore
 
@@ -80,3 +85,16 @@ def test_query_on_empty_collection_returns_no_documents(tmp_path):
     results = vs.query("anything", top_k=5)
     docs = results.get("documents", [[]])[0]
     assert docs == []
+
+
+def test_dense_reindex_removes_stale_chunks_and_is_idempotent(tmp_path):
+    vs = make_store(tmp_path)
+    vs.replace_texts(
+        ["first text", "old text"],
+        [{"source": "a.md", "chunk_index": 0}, {"source": "b.md", "chunk_index": 0}],
+    )
+    assert vs.collection.count() == 2
+    for _ in range(2):
+        vs.replace_texts(["updated text"], [{"source": "a.md", "chunk_index": 0}])
+    assert vs.collection.count() == 1
+    assert vs.query("updated text", 5)["documents"][0] == ["updated text"]

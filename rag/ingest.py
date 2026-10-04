@@ -4,7 +4,6 @@ from pathlib import Path
 from typing import List
 
 from .config import CHUNK_OVERLAP, CHUNK_SIZE, DATA_DIR
-from .vectorstore import VectorStore
 
 # Matches one or more blank lines, used to split text into paragraphs.
 _PARAGRAPH_SPLIT_RE = re.compile(r"\n\s*\n")
@@ -24,7 +23,7 @@ def load_files() -> List[Path]:
         for p in DATA_DIR.glob("**/*")
         if p.suffix in exts and p.is_file() and p.name not in excluded_names
     ]
-    return files
+    return sorted(files)
 
 
 def _split_paragraphs(text: str) -> List[str]:
@@ -64,7 +63,11 @@ def chunk_text(text: str, chunk_size: int, overlap: int) -> List[str]:
 
     sentences: List[str] = []
     for paragraph in _split_paragraphs(text):
-        sentences.extend(_split_sentences(paragraph))
+        for sentence in _split_sentences(paragraph):
+            words = sentence.split()
+            sentences.extend(
+                " ".join(words[i:i + chunk_size]) for i in range(0, len(words), chunk_size)
+            )
 
     if not sentences:
         return []
@@ -92,6 +95,8 @@ def chunk_text(text: str, chunk_size: int, overlap: int) -> List[str]:
                     overlap_tokens += t
                 current = overlap_sentences
                 current_tokens = overlap_tokens
+                while current and current_tokens + sentence_tokens > chunk_size:
+                    current_tokens -= _count_tokens(current.pop(0))
             else:
                 current = []
                 current_tokens = 0
@@ -106,6 +111,9 @@ def chunk_text(text: str, chunk_size: int, overlap: int) -> List[str]:
 
 
 def ingest():
+    # Dense indexing is optional; chunking and lexical evaluation stay dependency-light.
+    from .vectorstore import VectorStore
+
     os.makedirs(DATA_DIR, exist_ok=True)
     vs = VectorStore()
 
@@ -123,12 +131,12 @@ def ingest():
         for i, ch in enumerate(chunks):
             all_texts.append(ch)
             all_metas.append({
-                "source": f.name,
+                "source": f.relative_to(DATA_DIR).as_posix(),
                 "chunk_index": i
             })
 
     print(f"Ingesting {len(all_texts)} chunks from {len(files)} files...")
-    vs.add_texts(all_texts, all_metas)
+    vs.replace_texts(all_texts, all_metas)
     print("Ingestion complete.")
 
 
