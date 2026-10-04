@@ -22,7 +22,7 @@ No repository was determined to be a copied tutorial or shared assignment from t
 | 3 | imdb-sentiment-distilbert-app | IMDB sentiment experiments with a TF-IDF baseline, DistilBERT, FastAPI, and Streamlit. Fine-tuned weights must be produced locally. |
 | 4 | sepsis-early-detection-ml | Synthetic sepsis training pipeline with leakage checks and cross-validation. Reference data has pre-split SMOTE limitations; no clinical validation. |
 
-The IMDB API exists but model weights are absent, and README notebook paths need correction before treating it as a plug-and-play demo. Keep four pins rather than filling six slots with weaker evidence. Keep historical notebooks public as learning history; deletion is unnecessary.
+The IMDB API exists but model weights are absent. README notebook paths were corrected in this pass; the model still must be trained before the API can start. Keep four pins rather than filling six slots with weaker evidence. Keep historical notebooks public as learning history; deletion is unnecessary.
 
 For currently pinned projects being demoted:
 

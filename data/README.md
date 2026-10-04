@@ -1,10 +1,16 @@
-# Sample Knowledge Base
+# Sample knowledge base
 
-The `samples/` directory contains five short, original Markdown explainer
-documents on unrelated backend/systems topics (HTTP caching, Bloom filters,
-database indexing, consistent hashing, and API rate limiting). They exist
-purely as a small, public, PII-free corpus so anyone who clones this repo
-can run `python -m rag.ingest` and get a working, reproducible demo without
-needing any private documents. Drop your own `.txt`/`.md` files anywhere
-under `data/` (including in new subdirectories) to index different content
-instead — `rag/ingest.py` walks the directory recursively.
+`data/samples/` contains eight small Markdown documents: five system-design
+explainers (HTTP caching, Bloom filters, database indexing, consistent hashing,
+and rate limiting) and three operating runbooks added for this project
+(retrieval operations, agent safety, and API operations).
+
+The default API builds an immutable BM25 snapshot from `data/samples/` at first
+use. Add `.md`/`.txt` files beneath that directory and restart to re-index. No
+private employer documents are included. The runbooks describe this demo's
+operating contract; they are not records of a real production incident.
+
+The optional dense experiment uses `python -m rag.ingest`, which walks all of
+`data/` while excluding files named `README.md`. It requires extra dependencies
+and downloads the pretrained embedding model. Evaluation labels live outside
+the corpus in `evals/` and must not be indexed.
