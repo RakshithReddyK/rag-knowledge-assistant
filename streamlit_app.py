@@ -2,6 +2,9 @@ import os
 
 import requests
 import streamlit as st
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Backend API URL
 API_URL = os.getenv("RAG_API_URL", "http://127.0.0.1:9000/ask")
@@ -12,7 +15,8 @@ def call_rag_api(question: str):
     try:
         resp = requests.post(
             API_URL,
-            json={"question": question},
+            json={"question": question, "mode": st.session_state.get("answer_mode", "extractive")},
+            headers={"X-API-Key": os.getenv("RAG_API_KEY", "")},
             timeout=60,
         )
         resp.raise_for_status()
@@ -34,8 +38,7 @@ st.set_page_config(
 st.title("📚 RAG Knowledge Assistant")
 st.write(
     "Ask questions about your indexed documents. "
-    "Answers are generated using **retrieval-augmented generation** "
-    "(Chroma vector store + LLM)."
+    "View supporting excerpts locally, or select generated answers to use the configured LLM."
 )
 
 # Initialize chat history
@@ -44,14 +47,15 @@ if "messages" not in st.session_state:
 
 # Sidebar info
 with st.sidebar:
+    st.selectbox("Answer mode", ["extractive", "generative"], key="answer_mode")
+    st.caption("Generated answers require the server’s Groq API key.")
     st.header("About")
     st.markdown(
         """
         **Stack:**
-        - Chroma (vector store)
-        - SentenceTransformers embeddings
+        - BM25 retrieval over a versioned corpus
         - FastAPI backend (`/ask`)
-        - LLM via Groq (Llama 3.1)
+        - Optional generation via Groq
         - Streamlit frontend
 
         **Tip:** Ask things like:
@@ -89,9 +93,7 @@ user_input = st.chat_input("Ask a question about your documents...")
 
 if user_input:
     # Add user message to history
-    st.session_state["messages"].append(
-        {"role": "user", "content": user_input}
-    )
+    st.session_state["messages"].append({"role": "user", "content": user_input})
 
     # Display user message
     with st.chat_message("user"):
@@ -114,4 +116,3 @@ if user_input:
                     "context": context,
                 }
             )
-

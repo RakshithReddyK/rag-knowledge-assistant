@@ -1,6 +1,7 @@
 """Run a small source-and-evidence retrieval regression benchmark offline."""
 
 import json
+import math
 import platform
 import statistics
 import time
@@ -45,7 +46,7 @@ def evaluate(kb, rows, method="bm25", k=3):
         "mrr_at_3": sum(1 / r["rank"] if r["rank"] else 0 for r in results) / count,
         "evidence_hit_at_3": sum(r["evidence_hit"] for r in results) / count,
         "latency_p50_ms": statistics.median(durations),
-        "latency_p95_ms": durations[max(0, int(0.95 * count) - 1)],
+        "latency_p95_ms": durations[max(0, math.ceil(0.95 * count) - 1)],
         "queries": results,
     }
 

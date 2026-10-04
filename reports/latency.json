@@ -1,0 +1,32 @@
+{
+  "transport": "loopback HTTP, persistent client, one Uvicorn worker",
+  "concurrency": 1,
+  "warmup_per_endpoint": 5,
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "cpu_count": 9,
+  "provider_calls": 0,
+  "provider_cost_usd": 0,
+  "index": {
+    "status": "ready",
+    "index_version": "755bb1d9fb15cfb5",
+    "documents": 8,
+    "chunks": 19,
+    "generation_configured": false
+  },
+  "results": {
+    "/ask": {
+      "requests": 100,
+      "p50_ms": 1.2041745000601622,
+      "p95_ms": 1.6323819999115585,
+      "max_ms": 14.95097600002282
+    },
+    "/agent": {
+      "requests": 100,
+      "p50_ms": 1.187562000040998,
+      "p95_ms": 2.9266180000604436,
+      "max_ms": 6.207882000012432
+    }
+  },
+  "scope": "Tiny corpus, repeated query; not a production load or LLM benchmark"
+}

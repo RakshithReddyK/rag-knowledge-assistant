@@ -1,31 +1,18 @@
-# Single image used for both the FastAPI backend and the Streamlit
-# frontend (see docker-compose.yml, which overrides `command:` per
-# service) as well as for one-off ingestion runs.
 FROM python:3.11-slim
-
 WORKDIR /app
-
-# System deps: chromadb's dependency chain (onnxruntime etc.) and
-# sentence-transformers occasionally need a C build toolchain.
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends build-essential \
-    && rm -rf /var/lib/apt/lists/*
-
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-
+ARG INSTALL_EXTRAS=false
+COPY requirements*.txt ./
+RUN if [ "$INSTALL_EXTRAS" = "true" ]; then \
+      pip install --no-cache-dir -r requirements.txt; \
+    else pip install --no-cache-dir -r requirements-core.txt; fi
 COPY rag ./rag
 COPY api ./api
 COPY streamlit_app.py ./
 COPY data ./data
-
-# rag/config.py resolves CHROMA_DIR as <repo-root>/chroma_db, which inside
-# this image is /app/chroma_db. Mount a volume at that path in
-# docker-compose so the persisted index survives container restarts.
-RUN mkdir -p /app/chroma_db
-
+RUN useradd --uid 10001 --create-home appuser \
+    && mkdir -p /app/chroma_db && chown -R appuser:appuser /app
+USER appuser
 EXPOSE 9000
-
-# Default: run the FastAPI backend. docker-compose overrides this for the
-# streamlit service and for the one-off ingestion job.
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:9000/health')"
 CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "9000"]

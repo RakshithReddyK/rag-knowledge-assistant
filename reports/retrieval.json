@@ -11,8 +11,8 @@
       "hit_rate_at_3": 1.0,
       "mrr_at_3": 1.0,
       "evidence_hit_at_3": 1.0,
-      "latency_p50_ms": 0.02950949999558361,
-      "latency_p95_ms": 0.04853199993704038,
+      "latency_p50_ms": 0.030064499981108384,
+      "latency_p95_ms": 0.05569300003571698,
       "queries": [
         {
           "id": "dev-00",
@@ -23,7 +23,7 @@
             "rate_limiting.md",
             "rate_limiting.md"
           ],
-          "latency_ms": 0.05845600003340223
+          "latency_ms": 0.05569300003571698
         },
         {
           "id": "dev-01",
@@ -34,7 +34,7 @@
             "rate_limiting.md",
             "rate_limiting.md"
           ],
-          "latency_ms": 0.03914800004167773
+          "latency_ms": 0.047841000082371465
         },
         {
           "id": "dev-02",
@@ -45,7 +45,7 @@
             "bloom_filters.md",
             "bloom_filters.md"
           ],
-          "latency_ms": 0.03068599994549004
+          "latency_ms": 0.03343000003042107
         },
         {
           "id": "dev-03",
@@ -56,7 +56,7 @@
             "consistent_hashing.md",
             "consistent_hashing.md"
           ],
-          "latency_ms": 0.030895999998392654
+          "latency_ms": 0.032959000009213923
         },
         {
           "id": "dev-04",
@@ -67,7 +67,7 @@
             "database_indexing.md",
             "database_indexing.md"
           ],
-          "latency_ms": 0.027500999976837193
+          "latency_ms": 0.02880299996377289
         },
         {
           "id": "dev-05",
@@ -78,7 +78,7 @@
             "http_caching.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.02680899990537
+          "latency_ms": 0.027380999995330058
         },
         {
           "id": "dev-06",
@@ -89,7 +89,7 @@
             "agent_safety.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.028172000043014123
+          "latency_ms": 0.028702999998131418
         },
         {
           "id": "dev-07",
@@ -100,7 +100,7 @@
             "retrieval_operations.md",
             "database_indexing.md"
           ],
-          "latency_ms": 0.030585999979848566
+          "latency_ms": 0.031325999998443876
         },
         {
           "id": "dev-08",
@@ -111,7 +111,7 @@
             "agent_safety.md",
             "http_caching.md"
           ],
-          "latency_ms": 0.04853199993704038
+          "latency_ms": 0.0313670000195998
         },
         {
           "id": "dev-09",
@@ -122,7 +122,7 @@
             "agent_safety.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.02095100001042738
+          "latency_ms": 0.021202000084485917
         },
         {
           "id": "dev-10",
@@ -133,7 +133,7 @@
             "api_operations.md",
             "agent_safety.md"
           ],
-          "latency_ms": 0.028433000011318654
+          "latency_ms": 0.028331999942565744
         },
         {
           "id": "dev-11",
@@ -144,7 +144,7 @@
             "api_operations.md",
             "agent_safety.md"
           ],
-          "latency_ms": 0.02171200003431295
+          "latency_ms": 0.021491999973477505
         }
       ]
     },
@@ -154,8 +154,8 @@
       "hit_rate_at_3": 1.0,
       "mrr_at_3": 1.0,
       "evidence_hit_at_3": 1.0,
-      "latency_p50_ms": 0.022313500039672363,
-      "latency_p95_ms": 0.03352900000663794,
+      "latency_p50_ms": 0.02188249999335312,
+      "latency_p95_ms": 0.033720000033099495,
       "queries": [
         {
           "id": "dev-00",
@@ -166,7 +166,7 @@
             "rate_limiting.md",
             "rate_limiting.md"
           ],
-          "latency_ms": 0.03352900000663794
+          "latency_ms": 0.033720000033099495
         },
         {
           "id": "dev-01",
@@ -177,7 +177,7 @@
             "rate_limiting.md",
             "rate_limiting.md"
           ],
-          "latency_ms": 0.028442000029826886
+          "latency_ms": 0.028012000029775663
         },
         {
           "id": "dev-02",
@@ -188,7 +188,7 @@
             "bloom_filters.md",
             "bloom_filters.md"
           ],
-          "latency_ms": 0.023714999997537234
+          "latency_ms": 0.02393599993411044
         },
         {
           "id": "dev-03",
@@ -199,7 +199,7 @@
             "consistent_hashing.md",
             "consistent_hashing.md"
           ],
-          "latency_ms": 0.022353000076691387
+          "latency_ms": 0.022653999963040405
         },
         {
           "id": "dev-04",
@@ -210,7 +210,7 @@
             "database_indexing.md",
             "database_indexing.md"
           ],
-          "latency_ms": 0.02072100005534594
+          "latency_ms": 0.02114100004746433
         },
         {
           "id": "dev-05",
@@ -221,7 +221,7 @@
             "api_operations.md",
             "http_caching.md"
           ],
-          "latency_ms": 0.040480000052411924
+          "latency_ms": 0.02089100007651723
         },
         {
           "id": "dev-06",
@@ -232,7 +232,7 @@
             "agent_safety.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.02196299999468465
+          "latency_ms": 0.020430000063242915
         },
         {
           "id": "dev-07",
@@ -243,7 +243,7 @@
             "database_indexing.md",
             "database_indexing.md"
           ],
-          "latency_ms": 0.022274000002653338
+          "latency_ms": 0.02196299999468465
         },
         {
           "id": "dev-08",
@@ -254,7 +254,7 @@
             "api_operations.md",
             "http_caching.md"
           ],
-          "latency_ms": 0.023625000039828592
+          "latency_ms": 0.022963999981584493
         },
         {
           "id": "dev-09",
@@ -265,7 +265,7 @@
             "api_operations.md",
             "agent_safety.md"
           ],
-          "latency_ms": 0.015201999985947623
+          "latency_ms": 0.016594999920016562
         },
         {
           "id": "dev-10",
@@ -276,7 +276,7 @@
             "agent_safety.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.02122199998666474
+          "latency_ms": 0.021801999992021592
         },
         {
           "id": "dev-11",
@@ -287,7 +287,7 @@
             "api_operations.md",
             "agent_safety.md"
           ],
-          "latency_ms": 0.01634399995964486
+          "latency_ms": 0.01658499991208373
         }
       ]
     },
@@ -297,8 +297,8 @@
       "hit_rate_at_3": 1.0,
       "mrr_at_3": 1.0,
       "evidence_hit_at_3": 1.0,
-      "latency_p50_ms": 0.019668499987801624,
-      "latency_p95_ms": 0.03087599998252699,
+      "latency_p50_ms": 0.019588999975894694,
+      "latency_p95_ms": 0.03250800000387244,
       "queries": [
         {
           "id": "dev-00",
@@ -309,7 +309,7 @@
             "rate_limiting.md",
             "rate_limiting.md"
           ],
-          "latency_ms": 0.03087599998252699
+          "latency_ms": 0.03250800000387244
         },
         {
           "id": "dev-01",
@@ -320,7 +320,7 @@
             "rate_limiting.md",
             "bloom_filters.md"
           ],
-          "latency_ms": 0.025648000018918538
+          "latency_ms": 0.026048999984595866
         },
         {
           "id": "dev-02",
@@ -331,7 +331,7 @@
             "bloom_filters.md",
             "bloom_filters.md"
           ],
-          "latency_ms": 0.020360000007713097
+          "latency_ms": 0.02126099991528463
         },
         {
           "id": "dev-03",
@@ -342,7 +342,7 @@
             "consistent_hashing.md",
             "consistent_hashing.md"
           ],
-          "latency_ms": 0.01996899993628176
+          "latency_ms": 0.020349999999780266
         },
         {
           "id": "dev-04",
@@ -353,7 +353,7 @@
             "database_indexing.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.037014999975326646
+          "latency_ms": 0.018027000010079064
         },
         {
           "id": "dev-05",
@@ -364,7 +364,7 @@
             "http_caching.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.017606000028536073
+          "latency_ms": 0.01740599998356629
         },
         {
           "id": "dev-06",
@@ -375,7 +375,7 @@
             "agent_safety.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.018447999991622055
+          "latency_ms": 0.01804699991225789
         },
         {
           "id": "dev-07",
@@ -386,7 +386,7 @@
             "database_indexing.md",
             "database_indexing.md"
           ],
-          "latency_ms": 0.019368000039321487
+          "latency_ms": 0.01995899992834893
         },
         {
           "id": "dev-08",
@@ -397,7 +397,7 @@
             "bloom_filters.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.02014000006056449
+          "latency_ms": 0.020761000087077264
         },
         {
           "id": "dev-09",
@@ -407,7 +407,7 @@
             "agent_safety.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.013098999943395029
+          "latency_ms": 0.013390000049184891
         },
         {
           "id": "dev-10",
@@ -418,7 +418,7 @@
             "agent_safety.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.018376999946667638
+          "latency_ms": 0.019219000023440458
         },
         {
           "id": "dev-11",
@@ -429,7 +429,7 @@
             "api_operations.md",
             "http_caching.md"
           ],
-          "latency_ms": 0.014461000091614551
+          "latency_ms": 0.014871999951537873
         }
       ]
     }
@@ -446,8 +446,8 @@
       "hit_rate_at_3": 1.0,
       "mrr_at_3": 0.9583333333333334,
       "evidence_hit_at_3": 0.9166666666666666,
-      "latency_p50_ms": 0.013104999993629463,
-      "latency_p95_ms": 0.014561999932993785,
+      "latency_p50_ms": 0.013254000009510492,
+      "latency_p95_ms": 0.030244999948081386,
       "queries": [
         {
           "id": "test-12",
@@ -458,7 +458,7 @@
             "rate_limiting.md",
             "rate_limiting.md"
           ],
-          "latency_ms": 0.053599000011672615
+          "latency_ms": 0.030244999948081386
         },
         {
           "id": "test-13",
@@ -469,7 +469,7 @@
             "rate_limiting.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.01429100007044326
+          "latency_ms": 0.014170999975249288
         },
         {
           "id": "test-14",
@@ -480,7 +480,7 @@
             "bloom_filters.md",
             "bloom_filters.md"
           ],
-          "latency_ms": 0.014561999932993785
+          "latency_ms": 0.014781999993829231
         },
         {
           "id": "test-15",
@@ -491,7 +491,7 @@
             "consistent_hashing.md",
             "consistent_hashing.md"
           ],
-          "latency_ms": 0.010145000032935059
+          "latency_ms": 0.0108960000488878
         },
         {
           "id": "test-16",
@@ -502,7 +502,7 @@
             "database_indexing.md",
             "rate_limiting.md"
           ],
-          "latency_ms": 0.01412100004927197
+          "latency_ms": 0.014512000007016468
         },
         {
           "id": "test-17",
@@ -513,7 +513,7 @@
             "http_caching.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.013770000009571959
+          "latency_ms": 0.013800000033370452
         },
         {
           "id": "test-18",
@@ -524,7 +524,7 @@
             "bloom_filters.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.012669000057030644
+          "latency_ms": 0.013069000033283373
         },
         {
           "id": "test-19",
@@ -535,7 +535,7 @@
             "retrieval_operations.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.011617000041042047
+          "latency_ms": 0.011357000062162115
         },
         {
           "id": "test-20",
@@ -546,7 +546,7 @@
             "bloom_filters.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.011115999996036408
+          "latency_ms": 0.01155699999344506
         },
         {
           "id": "test-21",
@@ -556,7 +556,7 @@
             "agent_safety.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.010625999948388198
+          "latency_ms": 0.011266999990766635
         },
         {
           "id": "test-22",
@@ -567,7 +567,7 @@
             "retrieval_operations.md",
             "agent_safety.md"
           ],
-          "latency_ms": 0.013089999924886797
+          "latency_ms": 0.013168999998924846
         },
         {
           "id": "test-23",
@@ -578,7 +578,7 @@
             "api_operations.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.013120000062372128
+          "latency_ms": 0.013339000020096137
         }
       ]
     },
@@ -588,8 +588,8 @@
       "hit_rate_at_3": 1.0,
       "mrr_at_3": 0.9583333333333334,
       "evidence_hit_at_3": 0.9166666666666666,
-      "latency_p50_ms": 0.021637000031660136,
-      "latency_p95_ms": 0.023916000031931617,
+      "latency_p50_ms": 0.022889000035775098,
+      "latency_p95_ms": 0.031215999911182735,
       "queries": [
         {
           "id": "test-12",
@@ -600,7 +600,7 @@
             "rate_limiting.md",
             "rate_limiting.md"
           ],
-          "latency_ms": 0.0238449999869772
+          "latency_ms": 0.02337500006888149
         },
         {
           "id": "test-13",
@@ -611,7 +611,7 @@
             "rate_limiting.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.020470999970712
+          "latency_ms": 0.019780000002356246
         },
         {
           "id": "test-14",
@@ -622,7 +622,7 @@
             "bloom_filters.md",
             "bloom_filters.md"
           ],
-          "latency_ms": 0.04920300000321731
+          "latency_ms": 0.024156000108632725
         },
         {
           "id": "test-15",
@@ -633,7 +633,7 @@
             "consistent_hashing.md",
             "consistent_hashing.md"
           ],
-          "latency_ms": 0.014911999983269197
+          "latency_ms": 0.015123000025596411
         },
         {
           "id": "test-16",
@@ -644,7 +644,7 @@
             "database_indexing.md",
             "consistent_hashing.md"
           ],
-          "latency_ms": 0.023916000031931617
+          "latency_ms": 0.023214000066218432
         },
         {
           "id": "test-17",
@@ -655,7 +655,7 @@
             "http_caching.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.02360500002396293
+          "latency_ms": 0.02333399993403873
         },
         {
           "id": "test-18",
@@ -666,7 +666,7 @@
             "bloom_filters.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.021742000058111444
+          "latency_ms": 0.02235299996300455
         },
         {
           "id": "test-19",
@@ -677,7 +677,7 @@
             "retrieval_operations.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.019008999970537843
+          "latency_ms": 0.019017999989046075
         },
         {
           "id": "test-20",
@@ -688,7 +688,7 @@
             "retrieval_operations.md",
             "bloom_filters.md"
           ],
-          "latency_ms": 0.01840700008415297
+          "latency_ms": 0.031215999911182735
         },
         {
           "id": "test-21",
@@ -698,7 +698,7 @@
             "agent_safety.md",
             "api_operations.md"
           ],
-          "latency_ms": 0.017286000002059154
+          "latency_ms": 0.018366999938734807
         },
         {
           "id": "test-22",
@@ -709,7 +709,7 @@
             "agent_safety.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.02220299995769892
+          "latency_ms": 0.02342499999485881
         },
         {
           "id": "test-23",
@@ -720,7 +720,7 @@
             "api_operations.md",
             "retrieval_operations.md"
           ],
-          "latency_ms": 0.02153200000520883
+          "latency_ms": 0.022564000005331764
         }
       ]
     }
